@@ -59,9 +59,9 @@ sorted_list = selection_sort(all_character_objects)
 total = calculate_total_amount(sorted_list)
 
 
-for char in sorted_list:
-    percentage = char.get_freq() / total * 100
-    print(char.get_char() , char.get_freq() ,percentage, "%")
+for char in sorted_list:                                       
+    percentage = char.get_freq() / len(all_characters) * 100    
+    print(char.get_char() , char.get_freq() ,percentage, "%")   
 
     #print(char.get_char())
     #print(char.get_freq())
