@@ -1,5 +1,4 @@
 
-
 class Character:                    # Character class for making letters into an object
     def __init__(self,char):
         self.char = char
@@ -36,12 +35,13 @@ def calculate_total_amount(list):               #calculating total amount of cha
 
 ############################################################################################
 
-f = open("초급+중급한자.txt", encoding='utf8')
+f = open("초급한자chinese_수정본.txt", encoding='utf8')
 file = f.read()
 full_file = file.rstrip("\n")
 
 all_characters = []
 all_character_objects = []
+
 
 
 for letter in full_file:            #creating a list of all characters and character objects seperately
@@ -61,10 +61,12 @@ total = calculate_total_amount(sorted_list)
 
 for char in sorted_list:
     percentage = char.get_freq() / total * 100
-    #print(char.get_char() , char.get_freq() ,percentage, "%")
+    print(char.get_char() , char.get_freq() ,percentage, "%")
 
     #print(char.get_char())
     #print(char.get_freq())
-    print(percentage, "%")
+    #print(percentage, "%")
 
 print(len(all_characters))
+
+print(total)
